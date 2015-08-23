@@ -160,8 +160,8 @@ static matrix_row_t read_cols(void)
 static void unselect_rows(void)
 {
     // Hi-Z(DDR:0, PORT:0) to unselect
-    DDRB  &= ~0b00000010;
-    PORTB &= ~0b00000010;
+    DDRB  &= ~0b01001110;
+    PORTB &= ~0b01001110;
 }
 
 static void select_row(uint8_t row)
@@ -171,6 +171,18 @@ static void select_row(uint8_t row)
         case 0:
             DDRB  |= (1<<1);
             PORTB &= ~(1<<1);
+            break;
+        case 1:
+            DDRB  |= (1<<3);
+            PORTB &= ~(1<<3);
+            break;
+        case 2:
+            DDRB  |= (1<<2);
+            PORTB &= ~(1<<2);
+            break;
+        case 3:
+            DDRB  |= (1<<6);
+            PORTB &= ~(1<<6);
             break;
     }
 }
