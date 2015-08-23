@@ -1,3 +1,16 @@
+# You'll need to copy in your own version of avrdude.conf in from somewhere (I
+# got mine from adding verbose logging to arduino IDE's upload to find out the
+# path it was using) cos permissions.
+
+PROGRAM_CMD:=sudo avrdude
+PROGRAM_CMD+= -Cavrdude.conf
+PROGRAM_CMD+= -v
+PROGRAM_CMD+= -patmega32u4
+PROGRAM_CMD+= -cavr109
+PROGRAM_CMD+= -P/dev/ttyACM0
+PROGRAM_CMD+= -b57600
+PROGRAM_CMD+= -D
+PROGRAM_CMD+= -Uflash:w:onekey_lufa.hex:i
 #----------------------------------------------------------------------------
 # On command line:
 #
@@ -114,7 +127,7 @@ OPT_DEFS += -DBOOTLOADER_SIZE=4096
 CONSOLE_ENABLE = yes	# Console for debug(+400)
 #COMMAND_ENABLE = yes    # Commands for debug and configuration
 #SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
-#NKRO_ENABLE = yes	# USB Nkey Rollover
+#NKRO_ENABLE = yes	# USB Nkey Rollover - not yet supported in LUFA
 
 #PS2_MOUSE_ENABLE = yes  # PS/2 mouse(TrackPoint) support
 #PS2_USE_BUSYWAIT = yes # uses primitive reference code
