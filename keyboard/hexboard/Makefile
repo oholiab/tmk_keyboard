@@ -1,3 +1,16 @@
+# You'll need to copy in your own version of avrdude.conf in from somewhere (I
+# got mine from adding verbose logging to arduino IDE's upload to find out the
+# path it was using) cos permissions.
+
+PROGRAM_CMD:=sudo avrdude
+PROGRAM_CMD+= -Cavrdude.conf
+PROGRAM_CMD+= -v
+PROGRAM_CMD+= -patmega32u4
+PROGRAM_CMD+= -cavr109
+PROGRAM_CMD+= -P/dev/ttyACM0
+PROGRAM_CMD+= -b57600
+PROGRAM_CMD+= -D
+PROGRAM_CMD+= -Uflash:w:onekey_lufa.hex:i
 #----------------------------------------------------------------------------
 # On command line:
 #
