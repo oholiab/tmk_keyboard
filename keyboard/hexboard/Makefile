@@ -10,7 +10,7 @@ PROGRAM_CMD+= -cavr109
 PROGRAM_CMD+= -P/dev/ttyACM0
 PROGRAM_CMD+= -b57600
 PROGRAM_CMD+= -D
-PROGRAM_CMD+= -Uflash:w:onekey_lufa.hex:i
+PROGRAM_CMD+= -Uflash:w:hexpad_lufa.hex:i
 #----------------------------------------------------------------------------
 # On command line:
 #
@@ -52,7 +52,7 @@ PROGRAM_CMD+= -Uflash:w:onekey_lufa.hex:i
 #----------------------------------------------------------------------------
 
 # Target file name (without extension).
-TARGET = onekey_lufa
+TARGET = hexpad_lufa
 
 # Directory common source filess exist
 TMK_DIR = ../../tmk_core
