@@ -1,3 +1,7 @@
+PORT ?= $(shell ./wait_for_port.sh)
+MCU = atmega32u4
+OPT_DEFS += -DBOOTLOADER_SIZE=512
+PROGRAM_CMD = avrdude -p $(MCU) -P $(PORT) -c avr109 -U flash:w:$(TARGET).hex
 #----------------------------------------------------------------------------
 # On command line:
 #
