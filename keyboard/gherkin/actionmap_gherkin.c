@@ -53,15 +53,15 @@ const action_t PROGMEM actionmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     F11,    F12,    TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   GRV, \
     TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS),
     [3] = ACTIONMAP( \
-    TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   MINS,   EQL,    LBRC,   RBRC,   BSLS, \
+    TAB,    TRNS,   TRNS,   TRNS,   TRNS,   MINS,   EQL,    LBRC,   RBRC,   BSLS, \
     TAB,    TRNS,   TRNS,   TRNS,   TRNS,   COMM,   DOT,    SLSH,   SCLN,   QUOT, \
     TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   LEFT,   DOWN,   UP,     RGHT),
     [4] = ACTIONMAP( \
-    TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   S11,    S12,    S13,    S14,    S15, \
+    TAB,    TRNS,   TRNS,   TRNS,   TRNS,   S11,    S12,    S13,    S14,    S15, \
     TAB,    TRNS,   TRNS,   TRNS,   TRNS,   S16,    S17,    S18,    S19,    S20, \
     TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   HOME,   PGDN,   PGUP,   END),
     [5] = ACTIONMAP( \
-    CALC,   WHOM,   MAIL,   MYCM,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   PSCR, \
+    TAB,    WHOM,   MAIL,   MYCM,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   PSCR, \
     TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   BLD,    BLI, \
     TRNS,   TRNS,   TRNS,   TRNS,   BTLD,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS),
 };
